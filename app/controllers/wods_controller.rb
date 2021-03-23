@@ -1,2 +1,3 @@
 class WodsController < ApplicationController
+
 end
