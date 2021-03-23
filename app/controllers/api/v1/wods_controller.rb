@@ -5,11 +5,17 @@ module Api
 
       def index
         @wods = Wod.all
+        render json: WodsRepresenter.new(@wods).as_json
       end
 
       def show
+        render json: WodRepresenter.new(@wod).as_json
+      end
+
+      private
+
+      def set_wod
         @wod = Wod.find(params[:id])
-        render json: {}
       end
     end
   end
