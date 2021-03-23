@@ -5,5 +5,4 @@ class Wod < ApplicationRecord
   validates :title, :description, :image, presence: true
 
   validates :title, length: { minimum: 2, maximum: 255 }
-
 end

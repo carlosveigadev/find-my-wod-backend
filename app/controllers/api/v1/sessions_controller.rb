@@ -2,12 +2,12 @@ module Api
   module V1
     class SessionsController < ApplicationController
       include CurrentUserConcern
-  
+
       def create
         user = User
           .find_by(email: params['user']['email'])
           .try(:authenticate, params['user']['password'])
-  
+
         if user
           session[:user_id] = user.id
           render json: {
@@ -19,7 +19,7 @@ module Api
           render json: { status: 401 }
         end
       end
-  
+
       def logged_in
         if @current_user
           render json: {
@@ -32,7 +32,7 @@ module Api
           }
         end
       end
-  
+
       def logout
         reset_session
         render json: {
@@ -43,4 +43,3 @@ module Api
     end
   end
 end
-

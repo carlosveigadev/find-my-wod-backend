@@ -1,5 +1,5 @@
 module Api
-  module V1  
+  module V1
     class WodsController < ApplicationController
       include CurrentUserConcern
 
@@ -11,8 +11,6 @@ module Api
         @wod = Wod.find(params[:id])
         render json: {}
       end
-
-
     end
   end
 end
