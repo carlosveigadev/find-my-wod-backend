@@ -7,7 +7,6 @@ module ExceptionHandler
   class InvalidToken < StandardError; end
   class ExpiredSignature < StandardError; end
 
-
   included do
     # Define custom handlers
     rescue_from ActiveRecord::RecordInvalid, with: :four_twenty_two
