@@ -13,6 +13,21 @@ module Api
         render json: WodRepresenter.new(@wod).as_json
       end
 
+      def favourite
+        if @current_user.favourites.exists?(wod_id: params[:wod_id])
+          render json: { message: 'You\'ve already favourited this Wod!' }, status: :forbidden
+        else
+          @current_user.favourited_wods << Wod.find(params[:wod_id])
+          render json: { message: 'Success' }
+        end
+      end
+    
+      def unfavourite
+        favourite = @current_user.favourites.find_by(wod_id: params[:wod_id])
+        favourite&.delete
+        render json: { message: 'Success' }
+      end
+
       private
 
       def set_wod

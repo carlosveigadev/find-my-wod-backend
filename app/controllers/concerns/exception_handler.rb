@@ -10,5 +10,8 @@ module ExceptionHandler
     rescue_from ActiveRecord::RecordNotDestroyed do |e|
       json_response({ errors: e.record.errors }, :unprocessable_entity)
     end
+    rescue_from ActiveRecord::RecordInvalid do |e|
+      json_response({ error: e.message }, :forbidden)
+    end
   end
 end
