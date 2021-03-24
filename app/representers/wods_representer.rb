@@ -4,12 +4,12 @@ class WodsRepresenter
   end
 
   def as_json
-    wods.map do |_wod|
+    wods.map do |wod|
       {
-        id: _wod.id,
-        title: _wod.title,
-        description: _wod.description,
-        date_added: _wod.created_at
+        id: wod.id,
+        title: wod.title,
+        description: wod.description,
+        date_added: wod.created_at
       }
     end
   end
