@@ -21,7 +21,7 @@ module Api
           render json: { message: 'Success' }
         end
       end
-    
+
       def unfavourite
         favourite = @current_user.favourites.find_by(wod_id: params[:wod_id])
         favourite&.delete
