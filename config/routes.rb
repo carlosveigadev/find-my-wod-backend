@@ -5,17 +5,16 @@ Rails.application.routes.draw do
       
       resources :registrations, only: [:create]
       
-      resources :wods, only: %i[index show]
-
-      resources :favourites, only: [:index]
+      resources :wods, only: %i[index show] do
+        post 'favourite', to: 'wods#favourite'
+        post 'unfavourite', to: 'wods#unfavourite'
+      end
 
       delete :logout, to: "sessions#logout"
       
       get :logged_in, to: "sessions#logged_in"
       
       root to: "wods#index"
-
-
     end
   end
 end
