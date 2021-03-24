@@ -1,7 +1,7 @@
 module Api
   module V1
     class WodsController < ApplicationController
-      include CurrentUserConcern
+      # include CurrentUserConcern
       before_action :set_wod, only: %i[update show destroy]
 
       def index

@@ -27,12 +27,12 @@ RSpec.describe 'Wods', type: :request do
       end
     end
     context 'when wod does not exist' do
-      let(:wod_id) { 0 }
+      let(:wods_id) { 0 }
       it 'returns status code 404' do
         expect(response).to have_http_status(404)
       end
       it 'returns a not found message' do
-        expect(response.body).to include("Couldn't find wod with 'id'=0")
+        expect(response.body).to include("Couldn't find Wod with 'id'=0")
       end
     end
   end
