@@ -5,6 +5,8 @@ Rails.application.routes.draw do
         post 'favourite', to: 'wods#favourite'
         post 'unfavourite', to: 'wods#unfavourite'
       end
+
+      get 'favourites', to: 'favourites#index'
       
       root to: "wods#index"
     end

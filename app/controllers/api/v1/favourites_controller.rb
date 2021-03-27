@@ -2,7 +2,8 @@ module Api
   module V1
     class FavouritesController < ApplicationController
       def index
-        @wods = @current_user.favourited_wods
+        @favs = @current_user.favourited_wods
+        json_response(@favs)
       end
     end
   end
