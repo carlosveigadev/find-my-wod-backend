@@ -8,7 +8,7 @@ require 'rack/cors'
 use Rack::Cors do
   # allow all origins in development
   allow do
-    origins '*'
+    origins '*', 'https://xenodochial-shockley-55c19b.netlify.app/'
     resource '*',
              headers: :any,
              methods: %i[get post delete put options]
