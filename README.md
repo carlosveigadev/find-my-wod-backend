@@ -87,7 +87,7 @@ After that, open the folder with the code editor of your choice and follow the s
  
 Contributions, issues, and feature requests are welcome!
  
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page]((https://github.com/carlosveigadev/find-my-wod-backend/issues)).
  
 ## **Show your support**
  
