@@ -50,9 +50,11 @@ After that, open the folder with the code editor of your choice and follow the s
 **Make sure you have [Yarn](https://yarnpkg.com/) installed in your machine.**
  
 **Open the terminal and go to the folder of the game and run the following commands:** <br>
-`yarn install`;
+`yarn install`
+
+`bundle install`
  
-**Those commands will ensure you installed the proper packages required and start the server locally**
+**Those commands will ensure you installed the proper packages required and install all the gems needed for the project.**
  
 ## **Configure the Database**
 **You need to configure the database with the following commands:** <br>
@@ -67,6 +69,11 @@ After that, open the folder with the code editor of your choice and follow the s
 `rails s -p 3001`
 
 **This command will make sure you run the project at the 3001 port, so you don't have any conflict with the front-end port, which is usually 3000.**
+
+## **Testing**
+**To check the test run the following command:** <br>
+`bundle exec rspec`
+
  
 ## **Author**
  
