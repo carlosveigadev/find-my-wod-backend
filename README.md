@@ -18,7 +18,7 @@ This is a solo project at the end of the Microverse Main Technical Curriculum. I
  
 ### **Structure**
 
-This application is the backend API  used with the project [Find My Wod - Front-End](https://github.com/carlosveigadev/find-my-wod-frontend)
+This application is the back-end API  used with the project [Find My Wod - Front-End](https://github.com/carlosveigadev/find-my-wod-frontend)
 
 ### **Endpoints of API**
 
@@ -61,6 +61,12 @@ After that, open the folder with the code editor of your choice and follow the s
 **This command will create the database, migrate the tables as necessary, and populate it with some data.**
 
 **If you have any problem configuring postgresql, check this [docs](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-18-04) for more info**
+
+## **Starting the Server**
+**To start the server run:** <br>
+`rails s -p 3001`
+
+**This command will make sure you run the project at the 3001 port, so you don't have any conflict with the front-end port, which is usually 3000.**
  
 ## **Author**
  
