@@ -20,6 +20,13 @@ This is a solo project at the end of the Microverse Main Technical Curriculum. I
 
 This application is the back-end API  used with the project [Find My Wod - Front-End](https://github.com/carlosveigadev/find-my-wod-frontend)
 
+The tables created are related according to the following diagram:
+
+<p align="center">
+ <img src="fmw-diagram.png" alt="Tables Diagram"/>
+</p>
+
+
 ### **Endpoints of API**
 
 | Endpoint                            | Functionality             |
