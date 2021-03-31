@@ -8,11 +8,9 @@ Rails.application.routes.draw do
 
       get 'favourites', to: 'favourites#index'
       
-      root to: "wods#index"
     end
   end
 
   post 'auth/login', to: 'authentication#authenticate'
   post 'signup', to: 'users#create'
-
 end
