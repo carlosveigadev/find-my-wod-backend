@@ -17,7 +17,6 @@ module ExceptionHandler
     rescue_from ActiveRecord::RecordNotFound do |err|
       json_response({ message: err.message }, :not_found)
     end
-
   end
 
   private
