@@ -18,7 +18,6 @@ class AuthenticateUser
     user = User.find_by(email: email)
     return user if user&.authenticate(password)
 
-    # raise Authentication error if credentials are invalid
-    raise(ExceptionHandler::AuthenticationError, Message.invalid_credentials)
+    raise(ActiveRecord::RecordNotFound, Message.invalid_credentials)
   end
 end
