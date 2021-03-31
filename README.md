@@ -29,15 +29,15 @@ The tables created are related according to the following diagram:
 
 ### **Endpoints of API**
 
-| Endpoint                            | Functionality             |
-| ---                                 |  ---:                     | 
-| POST /signup                        | Create Users              | 
-| POST /auth/login                    | Log In Users              | 
-| GET  /api/v1/wods                   | Get all Wods              | 
-| GET  /api/v1/wods/:id               | Get all Specific Wod      | 
-| GET  /api/v1/favourites             | Get all Favourited Wods   |
-| POST /api/v1/wods/:wod_id/favourite | Add Wod to Favourites     | 
-| POST /api/v1/wods/:wod_id/favourite | Remove Wod from favourites|
+| Endpoint                              | Functionality             |
+| ---                                   |  ---:                     | 
+| POST /signup                          | Create Users              | 
+| POST /auth/login                      | Log In Users              | 
+| GET  /api/v1/wods                     | Get all Wods              | 
+| GET  /api/v1/wods/:id                 | Get all Specific Wod      | 
+| GET  /api/v1/favourites               | Get all Favourited Wods   |
+| POST /api/v1/favourites/:favourite_id | Add Wod to Favourites     | 
+| DELETE /api/v1/favourites/:id         | Remove Wod from favourites|
 
 ## **Deployed At:**
  
