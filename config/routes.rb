@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     end
   end
 
-  post 'auth/login', to: 'authentication#authenticate'
+  resources :authentication, only: [:create]
   post 'signup', to: 'users#create'
 end
