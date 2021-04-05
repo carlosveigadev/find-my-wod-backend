@@ -13,7 +13,8 @@ module Api
       end
 
       def destroy
-        favourite = Favourite.find_by(id: params[:id])
+        favourite = @current_user.favourites.find_by(wod_id: params[:id])
+        favourite&.delete
         render json: { message: 'Successfull Deleted' }
       end
 
