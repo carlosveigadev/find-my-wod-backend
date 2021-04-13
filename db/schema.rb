@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_03_23_165209) do
     t.bigint "wod_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id", "wod_id"], name: "index_favourites_on_user_id_and_wod_id"
+    t.index ["user_id", "wod_id"], name: "index_favourites_on_user_id_and_wod_id", uniqueness: true
     t.index ["user_id"], name: "index_favourites_on_user_id"
     t.index ["wod_id"], name: "index_favourites_on_wod_id"
   end
